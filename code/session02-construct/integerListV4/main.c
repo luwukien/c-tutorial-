@@ -23,11 +23,6 @@ int main(int argc, char *argv[]) {
 			printf("%d\t", i);		
 	}
 	
-	do 
-	{
-	}
-	whil
-	}
 	
 	
 	return 0;
