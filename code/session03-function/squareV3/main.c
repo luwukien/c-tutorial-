@@ -4,16 +4,24 @@
 // viết hàm tính bình phương của một con số nguyên
 
 int fV3();  // int fV4(int x) 100% hàm toán học y = f(x) = ................
-		
-int main(int argc, char *argv[]) {
-	fV3(); // để chạy chơi vậy đó
-	// vì hàm là một giá trị nên muốn biết một giá trị thì cần phải in
-	int result = fV3(); // hứng cái value, để in value!!!
-	printf("The result: %d\n", result);
+void fV1(); // hàm này không có trả về một giá trị 
 
+int main(int argc, char *argv[]) {
+	//fV3(); // để chạy chơi vậy đó
+	// vì hàm là một giá trị nên muốn biết một giá trị thì cần phải in
+	//int result = fV3(); // hứng cái value, để in value!!!
+	//printf("The result: %d\n", result);
+	// vì hàm là một value int gì đó. Cho nên ta có thể xài m ở trong các biểu thức
+	// khác, trong các câu lệnh khác 
+	
+	// định luật bắc cầu ~ tương đương value ~ đổ ngang giá trị
+	
+	printf("The result: %d\n", fV3()); // result - vì hàm là một giá trị
 	return 0;
 }
-
+void fV1(){
+	printf("This function returns no value. It is a void function.\n")
+}
 int fV3() 
 {
 	/// vì hàm không có đầu vào sẵn nên ta phải tự tạo

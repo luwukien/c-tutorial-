@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
 		printf("Input a area which need calc or quit, please: ");
 		scanf("%d", &choice);	
 		
-			switch(choice)
+		switch(choice)
 	{
 		
 		case 1:

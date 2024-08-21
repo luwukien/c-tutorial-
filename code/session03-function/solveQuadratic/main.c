@@ -9,29 +9,48 @@
 // P: delta = ...;
 // O: x1, x2
 
-float solveQuadratic(int a, int b, int c);
+void solveQuadratic(float a, float b, float c);
+
 
 int main(int argc, char *argv[]) {
 	
-//	int a, b, c;
-//	printf("Welcome my programing> We can solve quadratic and show result for you> ax^2 + bx + c = 0\n");
-//	printf("Input a, b, c please: ");
-//	scanf("%d%d%d", &a, &b, &c);
+	float a, b, c;
+	printf("Hello, we can solve a quickly quadratic ax^2 + bx + c = 0\n");
+	printf("Please input a, b, c: ");
+	scanf("%f%f%f", &a, &b, &c);
 	
-	float result = solveQuadratic(2, -9, 7);
-	printf("%f\n%f", result);
-		
+
+	
+	solveQuadratic(a, b, c);	
 	return 0;
 }
 
-float solveQuadratic(int a, int b, int c)
-{
-	float delta = (b * b) - (4.0 * a - c);
+void solveQuadratic(float a, float b, float c) {
+	float delta, x1, x2, x3;
+
+	if (a == 0)
+	{
+		printf("Please input a > 0");
+		return;	
+	}	
+
+	delta = pow(b, 2) - 4 * a * c;
+
 	
-	float x1 = (- b + sqrt(delta)) / 2.0 * a;
-	
-	float x2 = (- b - sqrt(delta)) / 2.0 * a;
-	
-	return x1, x2;
-	
+	if (delta == 0)
+	{
+		x3 = -b / (2 * a);
+		printf(" x = %.2f", x3);
+	}
+	else if (delta < 0)
+		printf("No real solutions\n");
+	else 
+	{
+		x1 = (-b + sqrt(delta)) / (2 * a);
+		x2 = (-b - sqrt(delta)) / (2 * a);
+		printf("x1 = %.2f; x2 = %.2f", x1, x2);
+	}	
 }
+// DONE
+
+
